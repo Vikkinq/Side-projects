@@ -1,0 +1,57 @@
+/* style.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.color-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.color-card h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#color-wheel {
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  appearance: none;
+}
+
+#color-wheel::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+#color-wheel::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
