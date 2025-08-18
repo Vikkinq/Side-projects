@@ -1,0 +1,160 @@
+/* Reset and basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  background: #fff; /* changed to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+main {
+  width: 100%;
+  max-width: 450px; /* increased width */
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  width: 380px;
+  border-radius: 12px;
+  padding: 50px 50px 60px; /* a bit bigger padding */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 450px; /* ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  outline-offset: 4px;
+  transition: all 0.3s ease;
+  width: 100%; /* make inputs fill container */
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.5);
+}
+
+input[type="submit"] {
+  background: #2575fc;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 12px rgba(37, 117, 252, 0.4);
+  user-select: none;
+}
+
+input[type="submit"]:hover {
+  background: #1b52d1;
+  box-shadow: 0 6px 16px rgba(27, 82, 209, 0.6);
+}
+
+.password-section {
+  position: relative;
+  display: flex; /* fix shrink by making flex container */
+  align-items: center;
+}
+
+.password-section input[type="password"] {
+  padding-right: 45px;
+  flex-grow: 1; /* input takes full width except for icon */
+  min-width: 0; /* prevents shrinking in flex */
+}
+
+.password-section i {
+  position: absolute;
+  right: 15px;
+  color: #888;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.25s ease;
+  user-select: none;
+}
+
+.password-section i:hover {
+  color: #2575fc;
+}
+
+p#login-failed,
+p#reg-failed {
+  font-size: 0.9rem;
+  color: #e74c3c;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  min-height: 24px; /* more height to handle longer error text */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+span a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+  transition: color 0.3s ease;
+}
+
+span a:hover {
+  color: #1b52d1;
+  text-decoration: underline;
+}
+
+/* Responsive tweak */
+@media (max-width: 460px) {
+  main {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 40px 20px 20px;
+    min-height: auto;
+  }
+
+  .card h1 {
+    font-size: 2rem;
+  }
+}
