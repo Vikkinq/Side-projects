@@ -1,0 +1,56 @@
+:root {
+  --accent-2: #38bdf8; /* sky-400 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #1174d1;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.7rem;
+}
+
+button {
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  background: var(--accent-2);
+  color: #ffffff;
+  transition: transform 0.3s ease, opacity 0.15s, background 0.15s ease;
+}
+
+button:hover {
+  transform: scale(1.07);
+}
+
+.quote-card {
+  width: min(560px, 92vw);
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+span {
+  font-size: 1.3rem;
+}
