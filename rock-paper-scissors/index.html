@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper and Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Rock, Paper & Scissors</h1>
+
+      <div class="scoreboard">
+        <div class="score">
+          <span>Player</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="score">
+          <span>Computer</span>
+          <strong id="computerScore">0</strong>
+        </div>
+      </div>
+
+      <h2 id="result">Make your move!</h2>
+
+      <div class="choices">
+        <img class="btn" src="img/rock.png" alt="Rock" data-value="rock" />
+        <img class="btn" src="img/paper.png" alt="Paper" data-value="paper" />
+        <img
+          class="btn"
+          src="img/scissor.png"
+          alt="Scissor"
+          data-value="scissor"
+        />
+      </div>
+
+      <div class="selections">
+        <div>
+          <p>You chose:</p>
+          <img
+            id="playerChoice"
+            src="img/question-mark.png"
+            alt="Your Choice"
+          />
+        </div>
+        <div>
+          <p>Computer chose:</p>
+          <img
+            id="compImage"
+            src="img/question-mark.png"
+            alt="Computer Choice"
+          />
+        </div>
+      </div>
+
+      <button id="reset">Reset Game</button>
+
+      <!-- Trigger (optional on first load you auto-open it) -->
+      <button id="openMode">Mode</button>
+
+      <!-- Modal -->
+      <div
+        id="modeModal"
+        class="modal hidden"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="modal-card" role="document">
+          <h2>Choose Mode</h2>
+          <div class="row">
+            <button data-mode="PVP">Player vs Player</button>
+            <button data-mode="PVC">Player vs Computer</button>
+          </div>
+          <label
+            >Best of:
+            <select id="bestOf">
+              <option>3</option>
+              <option>5</option>
+              <option>7</option>
+            </select>
+          </label>
+          <button id="closeMode">Close</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
