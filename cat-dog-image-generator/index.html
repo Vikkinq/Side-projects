@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat & Dog Image Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h1>Dog & Cat Generator</h1>
+
+        <div class="image-container">
+          <p id="dog-loading" class="loading hidden">Loading Dog...</p>
+          <img id="dog" src="" alt="Random Dog" />
+          <span>Dog</span>
+        </div>
+
+        <div class="image-container">
+          <p id="cat-loading" class="loading hidden">Loading Cat...</p>
+          <img id="cat" src="" alt="Random Cat" />
+          <span>Cat</span>
+        </div>
+
+        <button id="btn">Generate Image</button>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
