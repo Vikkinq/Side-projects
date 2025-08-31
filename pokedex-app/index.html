@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pokedex</h1>
+      <div class="search-filter">
+        <input type="text" id="search" placeholder="Search Pokemon..." />
+
+        <select id="filter-type">
+          <option value="">Filter by Type</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="grass">Grass</option>
+          <option value="electric">Electric</option>
+          <option value="psychic">Psychic</option>
+          <option value="dragon">Dragon</option>
+          <option value="fairy">Fairy</option>
+          <option value="normal">Normal</option>
+        </select>
+
+        <select id="filter-region">
+          <option value="">Filter by Region</option>
+          <option value="kanto">Kanto</option>
+          <option value="johto">Johto</option>
+          <option value="hoenn">Hoenn</option>
+          <option value="sinnoh">Sinnoh</option>
+          <option value="unova">Unova</option>
+          <option value="kalos">Kalos</option>
+          <option value="alola">Alola</option>
+          <option value="galar">Galar</option>
+          <option value="paldea">Paldea</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section id="pokemon-grid" class="grid"></section>
+
+      <div class="load-more-container">
+        <button id="load-more">Load More</button>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="backup.js"></script>
+  </body>
+</html>
