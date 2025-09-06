@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Dex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Added mobile burger menu button -->
+    <button class="burger-menu" id="burger-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Converted header to sidebar with search functionality -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>AnimeDex</h1>
+      </div>
+
+      <div class="search-section">
+        <h3>Search & Filter</h3>
+        <form id="anime-form">
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Search Anime..."
+              name=""
+              id="anime-input"
+            />
+            <button id="search-btn" type="submit">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="filter-group">
+          <label for="filter-anime">Filter by Type:</label>
+          <select id="filter-anime">
+            <option value="" active>All Types</option>
+            <option value="movie">Movie</option>
+            <option value="ova">OVA</option>
+            <option value="tv">TV Series</option>
+            <option value="special">Special</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Added additional sidebar features -->
+      <div class="sidebar-stats">
+        <h3>Quick Stats</h3>
+        <div class="stat-item">
+          <span class="stat-label">Total Anime:</span>
+          <span class="stat-value" id="total-count">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Filtered:</span>
+          <span class="stat-value" id="filtered-count">0</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Restructured main content area -->
+    <main class="main-content">
+      <div class="content-header">
+        <h2>Discover Amazing Anime</h2>
+        <p class="subtitle">
+          Explore thousands of anime titles with detailed information and
+          ratings
+        </p>
+      </div>
+
+      <div class="grid-container">
+        <div id="gridSection" class="anime-grid"></div>
+      </div>
+    </main>
+
+    <!-- Added overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mobile-menu.js"></script>
+  </body>
+</html>
